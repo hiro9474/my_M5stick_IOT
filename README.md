@@ -1,3 +1,3 @@
 # my_M5stick_IOT
 M5stickとRaspberryPiによるIoT
-test test2
+test test2 privatetest
