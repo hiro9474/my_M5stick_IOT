@@ -1,6 +1,3 @@
-#!usr/bin/python3
-# -*- coding: utf-8 -*- 
-
 import paho.mqtt.client as mqtt     # MQTTのライブラリをインポート
 from time import sleep              # 3秒間のウェイトのために使う
 
@@ -19,14 +16,15 @@ def on_publish(client, userdata, mid):
 
 # メイン関数   この関数は末尾のif文から呼び出される
 def main():
-  client = mqtt.Client()                 # クラスのインスタンス(実体)の作成
+  client = mqtt.Client(client_id="pub_client")                 # クラスのインスタンス(実体)の作成
   client.on_connect = on_connect         # 接続時のコールバック関数を登録
   client.on_disconnect = on_disconnect   # 切断時のコールバックを登録
   client.on_publish = on_publish         # メッセージ送信時のコールバック
 
 
-  client.username_pw_set("token_HvlevplbmEyngEWT")
-  client.connect("mqtt.beebotte.com", 1883, 60)  # 接続先は自分自身
+  #client.username_pw_set("token_HvlevplbmEyngEWT")
+  client.username_pw_set(username="46323a3a", password="017f86d5b5690a13")
+  client.connect("broker.shiftr.io", 1883, 60)  # 接続先は自分自身
 
   # 通信処理スタート
   client.loop_start()    # subはloop_forever()だが，pubはloop_start()で起動だけさせる
@@ -34,11 +32,12 @@ def main():
   # 永久に繰り返す
 
   print('0:送信, 1:終了')
-
+  
   while True:
     msg = input()
     if msg == '0':
-      client.publish("home_IoT_test/home_IoT","Hello_world")    # トピック名とメッセージを決めて送信
+      pub_msg = input()
+      client.publish("raspberry/PI", pub_msg)    # トピック名とメッセージを決めて送信
     else:
       break
 
