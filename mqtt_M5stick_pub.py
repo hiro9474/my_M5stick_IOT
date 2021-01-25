@@ -20,6 +20,8 @@ def on_publish(client, userdata, mid):
 
 # メイン関数   この関数は末尾のif文から呼び出される
 def main():
+  x = 0
+  flg = 0
   client = mqtt.Client(client_id="pub_client")                 # クラスのインスタンス(実体)の作成
   client.on_connect = on_connect         # 接続時のコールバック関数を登録
   client.on_disconnect = on_disconnect   # 切断時のコールバックを登録
@@ -34,17 +36,9 @@ def main():
   client.loop_start()    # subはloop_forever()だが，pubはloop_start()で起動だけさせる
 
   # 永久に繰り返す
-
-  print('0:送信, 1:終了')
-  
-  time.time()
-  
   while True:
-    msg = input()
-    if msg == '0':
-      pub_msg = input()
-      client.publish("raspberry/PI", pub_msg)    # トピック名とメッセージを決めて送信
-    else:
+    if flg == x: 
+      client.publish("raspberry/PI", "Hello World")    # トピック名とメッセージを決めて送信
       break
 
 if __name__ == '__main__':          # importされないときだけmain()を呼ぶ
