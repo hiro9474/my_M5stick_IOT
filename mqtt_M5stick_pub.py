@@ -37,6 +37,8 @@ def main():
 
   print('0:送信, 1:終了')
   
+  time.time()
+  
   while True:
     msg = input()
     if msg == '0':
