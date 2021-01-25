@@ -1,3 +1,6 @@
+#!usr/bin/python
+# -*- coding: utf-8 -*- 
+
 import paho.mqtt.client as mqtt     # MQTTのライブラリをインポート
 from time import sleep              # 3秒間のウェイトのために使う
 
