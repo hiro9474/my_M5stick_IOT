@@ -3,6 +3,7 @@
 
 import paho.mqtt.client as mqtt     # MQTTのライブラリをインポート
 from time import sleep              # 3秒間のウェイトのために使う
+import time
 
 # ブローカーに接続できたときの処理
 def on_connect(client, userdata, flag, rc):
