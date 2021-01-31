@@ -27,6 +27,8 @@ def main():
     msg = input()
     
     time_judge(msg)
+    
+    print('終了しました')
  
 
 if __name__ == "__main__":
