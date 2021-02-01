@@ -147,7 +147,7 @@ if __name__ == '__main__':          # importされないときだけmain()を呼
 
 ### M5flow
 ファイル名：pub_test.m5f
-![画像](pg.png)
+![画像](img/pg.png)
 ___
 ## 4. 実行結果
 ### 動画

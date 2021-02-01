@@ -127,9 +127,9 @@ if __name__ == '__main__':          # importされないときだけmain()を呼
   main()    # メイン関数を呼び出す
 
 ```
-#### mqtt_M5stick_pub.M5F
+#### mqtt_M5stick_pub.m5f
 
-![mqtt_m5stick_IoT](mqtt_M5stick_IoT.png)
+![mqtt_m5stick_IoT](img/mqtt_M5stick_IoT.png)
 
 
 ## 4.改善点など
