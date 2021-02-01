@@ -28,7 +28,7 @@ M5stackにはタイマー機能があるためM5stack単体でのプログラム
 
 ## 2.MQTTとは
 別の時にまとめたものがあるのでそれを参照。
-[MQTTまとめ](http://devcenter.magellanic-clouds.com/learning/mqtt-spec.html)
+[MQTTまとめ](mqtt_test.md)
 
 
 
