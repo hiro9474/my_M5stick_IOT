@@ -49,10 +49,13 @@ ___
 視覚的に接続状況・通信状況をリアルタイムで確認できるのでデバックなどなどすごく便利。
 
 ### shiftr.ioの設定　
->[参考サイト](https://qiita.com/kmaepu/items/644b0bf2c3f438e71aa6)
+>~~[参考サイト](https://qiita.com/kmaepu/items/644b0bf2c3f438e71aa6)~~
 1. アカウントを作成
 1. New Namespaceをクリックし、iot-M5start-20201201という名前で空間を作成
 1. 空間に接続するユーザー[M5stack_01][remote_dev]を作成。(パスワードは記述しない)
+
+**2021/2/1 shiftr.io の大型アップデートにより仕様変更あり。しかし、大体同じ。**
+
 ___
 ## 3. プログラムの説明
 >[参考サイト](https://qiita.com/hsgucci/items/6461d8555ea1245ef6c2)
