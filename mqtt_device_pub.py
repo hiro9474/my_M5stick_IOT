@@ -20,26 +20,24 @@ def on_publish(client, userdata, mid):
 
 # メイン関数   この関数は末尾のif文から呼び出される
 def main():
-  flg = 0
-  client = mqtt.Client(client_id="pub_client")                 # クラスのインスタンス(実体)の作成
+  flag = True
+  client = mqtt.Client(client_id="pub_client")                 # クラスのインスタンス(実体)の作成 & 名前決め
   client.on_connect = on_connect         # 接続時のコールバック関数を登録
   client.on_disconnect = on_disconnect   # 切断時のコールバックを登録
   client.on_publish = on_publish         # メッセージ送信時のコールバック
 
-
-  #client.username_pw_set("token_HvlevplbmEyngEWT")
-  client.username_pw_set(username="skysnagglefoot341", password="xbVi7ql7K3BFLzim")
+  client.username_pw_set(username="skysnagglefoot341", password="xbVi7ql7K3BFLzim")     # ユーザー情報ない場合はコメントアウト
   client.connect("skysnagglefoot341.cloud.shiftr.io", 1883, 60)  # 接続先は自分自身
 
   # 通信処理スタート
   client.loop_start()    # subはloop_forever()だが，pubはloop_start()で起動だけさせる
 
   # 永久に繰り返す
-  while True:
-    if flg == 0: 
-      client.publish("raspberry/PI", "Hello World")    # トピック名とメッセージを決めて送信
+  while True:                                          # ループにしないと通信からbreakしない
+    if flag:
+      client.publish("school", "Hello World")    # トピック名とメッセージを決めて送信
       print('送信しました')
-      sleep(2)
+      sleep(2)                                         # 時間をおかないとbreakしない
       break
 
 if __name__ == '__main__':          # importされないときだけmain()を呼ぶ
