@@ -7,7 +7,7 @@ import time
 
 # ブローカーに接続できたときの処理
 def on_connect(client, userdata, flag, rc):
-  print("Connected with result code " + str(rc))
+  # print("Connected with result code " + str(rc))
 
 # ブローカーが切断したときの処理
 def on_disconnect(client, userdata, flag, rc):
@@ -31,6 +31,8 @@ def main():
 
   # 通信処理スタート
   client.loop_start()    # subはloop_forever()だが，pubはloop_start()で起動だけさせる
+
+  print('aiueo')
 
   # 永久に繰り返す
   while True:                                          # ループにしないと通信からbreakしない

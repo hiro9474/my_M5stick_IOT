@@ -3,7 +3,6 @@
 # -*- coding: utf-8 -*- 
 import time
 import datetime
-import test
 import mqtt_device_pub as pub_mqtt
 
 
