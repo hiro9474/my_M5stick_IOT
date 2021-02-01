@@ -8,6 +8,7 @@ import time
 # ブローカーに接続できたときの処理
 def on_connect(client, userdata, flag, rc):
   # print("Connected with result code " + str(rc))
+  pass
 
 # ブローカーが切断したときの処理
 def on_disconnect(client, userdata, flag, rc):
