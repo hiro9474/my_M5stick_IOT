@@ -10,6 +10,7 @@ timer & MQTTのプログラムはpythonで実現。
 1. システム概要
 1. MQTT・MQTTブローガー
 1. python プログラム
+1. 改善点など
 
 ## 1.システム概要
 ### あばうとに
@@ -130,3 +131,8 @@ if __name__ == '__main__':          # importされないときだけmain()を呼
 
 ![mqtt_m5stick_IoT](mqtt_M5stick_IoT.png)
 
+
+## 4.改善点など
+- timer.py の接続できなかった時の処理を入れる
+- GUIで時間を指定出来るようにできたらいい
+- プログラムの全体をもう少し綺麗にしたい
