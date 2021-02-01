@@ -19,9 +19,18 @@ M5stackにはタイマー機能があるためM5stack単体でのプログラム
 - 入力ができない。(一度プログラムしたらそのまま)
 - M5stackが対応できるセンサー・サービスの数がすくない。
 - MQTTのプログラムの勉強がしたかった。
+### 動作環境
+|MQTT|説明|
+| :-: | - |
+| publish | pythonが実行できる機器 and paho-mqtt ライブラリがインストール済み |
+| subscription | M5stick |
+
 ## 2.MQTTとは
 別の時にまとめたものがあるのでそれを参照。
 [MQTTまとめ](http://devcenter.magellanic-clouds.com/learning/mqtt-spec.html)
+
+
+
 ## 3.pythonプログラム
 
 ### 全体的なプログラムの紹介
